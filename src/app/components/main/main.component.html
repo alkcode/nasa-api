@@ -1,8 +1,25 @@
+<div class="container-fluid mt-3 main">
+    <h1 class="text-center main_titulo">Astronomy Picture of the Day </h1>
 
-<div class="container-fluid">
-    
-            <h2 class="text-center">{{datos.title}}</h2>
-            <p class="text-justify">{{datos.explanation}}</p>
-            <img src="{{datos.url}}" class="img-fluid" alt="" width="400px">
+    <div class="container mt-5">
+        <p class="text-justify main_explicacion">{{datos.explanation}}</p>
+        <div class="row mt-5">
+            <div class="col-md-4"></div>
+            <div class="col-md-4 align-items-center justify-items-center px-3">
+                <div *ngIf="datos.media_type=='image'">
+                    <img src="{{datos.url}}" class="img-fluid" alt="" >
+                    <h3 class="text-center">{{datos.title}}</h3>
+                    <p class="text-center font-monospace mt-4">Image Credit & Copyright: <a target="_blank" href="https://www.google.com/search?q={{datos.copyright}}">{{datos.copyright}}</a></p>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+
+        </div>
+
+
+    </div>
+
+
+
 
 </div>

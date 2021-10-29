@@ -2,7 +2,7 @@
     <h1 class="text-center main_titulo">Astronomy Picture of the Day </h1>
 
     <div class="container mt-5">
-        <p class="text-justify main_explicacion">{{datos.explanation}}</p>
+        <p class="text-justify main_explicacion">{{datos.explanation}}<span class="espacio">&#160;</span></p>
         <div class="row mt-5">
             <div class="col-md-4"></div>
             <div class="col-md-4 align-items-center justify-items-center px-3">
@@ -11,8 +11,23 @@
                     <h3 class="text-center">{{datos.title}}</h3>
                     <p class="text-center font-monospace mt-4">Image Credit & Copyright: <a target="_blank" href="https://www.google.com/search?q={{datos.copyright}}">{{datos.copyright}}</a></p>
                 </div>
+                <div *ngIf="datos.media_type=='video'">
+                    <div class="ratio ratio-16x9">
+                        <!-- <iframe src="datos.url" title="YouTube video" allowfullscreen></iframe> -->
+                        <a href="datos.url">Visit page</a>
+                        <h3 class="text-center">{{datos.title}}</h3>
+                    </div>
+                    
+                </div>
             </div>
-            <div class="col-md-4"></div>
+            <div class="col-md-4 mt-3 pb-3">
+                <section>
+                    <div class="main_planeta">
+                      <img class="main_planeta_tierra img-fluid" src="../../../assets/img/globe_PNG37.png">
+                      <img class="main_planeta_luna img-fluid" src="https://luismasdev.com/content/images/2016/11/luna.png">
+                    </div>
+                  </section>
+            </div>
 
         </div>
 

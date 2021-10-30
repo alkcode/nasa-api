@@ -7,8 +7,8 @@
             <div class="col-md-4"></div>
             <div class="col-md-4 align-items-center justify-items-center px-3">
                 <div *ngIf="datos.media_type=='image'">
-                    <img src="{{datos.url}}" class="img-fluid" alt="" >
-                    <h3 class="text-center">{{datos.title}}</h3>
+                    <img src="{{datos.url}}" class="img-fluid" alt="Image NASA API" >
+                    <h3 class="text-center mt-3">{{datos.title}}</h3>
                     <p class="text-center font-monospace mt-4">Image Credit & Copyright: <a target="_blank" href="https://www.google.com/search?q={{datos.copyright}}">{{datos.copyright}}</a></p>
                 </div>
                 <div *ngIf="datos.media_type=='video'">

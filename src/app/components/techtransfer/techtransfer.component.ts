@@ -1,29 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import { DatosService }  from '../../services/api.service';
-import { Datos } from '../../models/datos';
 
 @Component({
-  selector: 'app-main',
-  templateUrl: './main.component.html',
-  styleUrls: ['./main.component.scss'],
+  selector: 'app-techtransfer',
+  templateUrl: './techtransfer.component.html',
+  styleUrls: ['./techtransfer.component.scss'],
   providers:[DatosService]
 })
-export class MainComponent implements OnInit {
+export class TechtransferComponent implements OnInit {
 
-  // public datos: Datos[] = [];
   public datos:any = [];
 
-
-
-  constructor(private datosService:DatosService) {
-   }
+  constructor(private datosService:DatosService) { }
 
   ngOnInit(): void {
-
-    this.datosService.mostrarDatos().subscribe(
-      response=>{        
+    this.datosService.datosTransfer().subscribe(
+      response=>{
         this.datos=response;
-              
         console.log('============================');
         console.log(this.datos);
         

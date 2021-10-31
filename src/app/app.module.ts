@@ -9,6 +9,11 @@ import { MainComponent } from './components/main/main.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ErrorComponent } from './components/error/error.component';
 import { TechtransferComponent } from './components/techtransfer/techtransfer.component';
+//Importacion para generar el PDF
+import { PdfMakeWrapper } from 'pdfmake-wrapper';
+import * as pdfFonts from "pdfmake/build/vfs_fonts"; // fonts provided for pdfmake
+
+PdfMakeWrapper.setFonts(pdfFonts);
 
 @NgModule({
   declarations: [
